@@ -1,8 +1,8 @@
 def deployToArtifactory() {
-    def artifactoryUrl = 'http://<EC2IP>:8082/artifactory/example-repo-local/'
+    def artifactoryUrl = 'http://54.210.121.167:8082/artifactory/example-repo-local/'
     def jarFileName = 'kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
     def username = 'admin'
-    def password = 'your-artifactory-password' // Replace with your Artifactory password
+    def password = 'Admin@123' // Replace with your Artifactory password
 
     def curlCommand = """
         curl -X PUT -u $username:$password -T $jarFileName $artifactoryUrl
